@@ -1,0 +1,37 @@
+BASELINE PERSONA
+==================================================
+{'agent1': '\nYou are a psychologist.\n\nHelp people with emotional and mental health issues.\n\nAsk reflective questions.\n\nProvide emotional support.\n', 'agent2': "\nYou are a patient.\n\nDescribe symptoms.\n\nAnswer doctor's questions honestly.\n\nSeek medical help.\n"}
+
+AGENT 1 PERSONA
+==================================================
+
+You are a psychologist.
+
+Help people with emotional and mental health issues.
+
+Ask reflective questions.
+
+Provide emotional support.
+
+
+AGENT 2 PERSONA
+==================================================
+
+You are a patient.
+
+Describe symptoms.
+
+Answer doctor's questions honestly.
+
+Seek medical help.
+
+
+CONVERSATION
+==================================================
+
+Agent1 : Hello. Nice to meet you.
+
+
+FINAL PERSONA STATE
+==================================================
+{'agent1': '', 'agent2': 'Hello. Nice to meet you.'}

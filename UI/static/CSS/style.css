@@ -1,0 +1,502 @@
+/* ===================================================
+                SPASM++ Research UI
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111827;
+
+    color:#f8fafc;
+
+    font-family:'Segoe UI',sans-serif;
+
+    overflow:hidden;
+
+}
+
+
+/* ==========================================
+                NAVBAR
+========================================== */
+
+.navbar{
+
+    height:70px;
+
+    background:#1f2937;
+
+    border-bottom:1px solid #374151;
+
+}
+
+.navbar-brand{
+
+    color:white !important;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+                PANELS
+========================================== */
+
+.panel{
+
+    background:#1f2937;
+
+    border:1px solid #374151;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    height:calc(100vh - 100px);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* ==========================================
+                FORM
+========================================== */
+
+.form-control,
+.form-select{
+
+    background:#111827;
+
+    color:white;
+
+    border:1px solid #374151;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    background:#111827;
+
+    color:white;
+
+    border-color:#3b82f6;
+
+    box-shadow:none;
+
+}
+
+
+/* ==========================================
+                CHAT
+========================================== */
+
+.chat-header{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+
+#chat-area{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+
+/* ==========================================
+            Assistant Message
+========================================== */
+
+.assistant{
+
+    margin-bottom:25px;
+
+}
+
+.assistant .name{
+
+    font-size:13px;
+
+    color:#9ca3af;
+
+    margin-bottom:6px;
+
+    font-weight:600;
+
+}
+
+.assistant .bubble{
+
+    display:inline-block;
+
+    background:#374151;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:18px;
+
+    border-top-left-radius:6px;
+
+    max-width:80%;
+
+    line-height:1.7;
+
+    word-break:break-word;
+
+}
+
+
+/* ==========================================
+                User Message
+========================================== */
+
+.user{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    margin-bottom:25px;
+
+}
+
+.user .name{
+
+    font-size:13px;
+
+    color:#9ca3af;
+
+    margin-bottom:6px;
+
+    font-weight:600;
+
+}
+
+.user .bubble{
+
+    display:inline-block;
+
+    background:#4b5563;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:18px;
+
+    border-top-right-radius:6px;
+
+    max-width:80%;
+
+    line-height:1.7;
+
+    word-break:break-word;
+
+}
+
+
+/* ==========================================
+            INPUT BAR
+========================================== */
+
+.chat-input{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:20px;
+
+    border-top:1px solid #374151;
+
+    padding-top:18px;
+
+}
+
+.chat-input input{
+
+    flex:1;
+
+    height:52px;
+
+    background:#111827;
+
+    border:1px solid #4b5563;
+
+    border-radius:14px;
+
+    color:white;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+}
+
+.chat-input input::placeholder{
+
+    color:#9ca3af;
+
+}
+
+.chat-input button{
+
+    width:55px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    transition:.25s;
+
+}
+
+.chat-input button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+/* ==========================================
+                METRICS
+========================================== */
+
+.metric{
+
+    margin-bottom:22px;
+
+}
+
+.metric label{
+
+    display:block;
+
+    color:#d1d5db;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+}
+
+
+.progress{
+
+    height:12px;
+
+    background:#374151;
+
+    border-radius:20px;
+
+}
+
+.progress-bar{
+
+    font-size:10px;
+
+    font-weight:bold;
+
+}
+
+
+/* ==========================================
+                STATUS
+========================================== */
+
+.status{
+
+    margin-top:20px;
+
+    background:#064e3b;
+
+    color:#6ee7b7;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.btn-primary{
+
+    background:#2563eb;
+
+    border:none;
+
+}
+
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#4b5563;
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:992px){
+
+body{
+
+overflow:auto;
+
+}
+
+.panel{
+
+height:auto;
+
+margin-bottom:20px;
+
+}
+
+#chat-area{
+
+height:450px;
+
+}
+
+.assistant .bubble,
+.user .bubble{
+
+max-width:95%;
+
+}
+
+.chat-input{
+
+flex-direction:row;
+
+}
+
+}
+
+/* ==========================================
+        Live Analysis Text
+========================================== */
+
+.metric span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+        Progress Bars
+========================================== */
+
+.progress{
+
+    height:12px;
+
+}
+
+.progress-bar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    transition:width .5s ease;
+
+}
+
+.bg-primary{
+
+    background:#2563eb !important;
+
+}
+
+.bg-success{
+
+    background:#16a34a !important;
+
+}
+
+.bg-danger{
+
+    background:#dc2626 !important;
+
+}
+
+.bg-warning{
+
+    background:#f59e0b !important;
+
+}
+
+.bg-info{
+
+    background:#06b6d4 !important;
+
+}

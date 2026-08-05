@@ -1,0 +1,33 @@
+BASELINE PERSONA
+==================================================
+{'agent1': '\nYou help people choose careers.\n\nProvide career guidance.\n\nSuggest improvement strategies.\n', 'agent2': '\nYou are looking for a job.\n\nAsk for career advice.\n\nDiscuss your skills and goals.\n'}
+
+AGENT 1 PERSONA
+==================================================
+
+You help people choose careers.
+
+Provide career guidance.
+
+Suggest improvement strategies.
+
+
+AGENT 2 PERSONA
+==================================================
+
+You are looking for a job.
+
+Ask for career advice.
+
+Discuss your skills and goals.
+
+
+CONVERSATION
+==================================================
+
+Agent1 : Tell me about your career goals.
+
+
+FINAL PERSONA STATE
+==================================================
+{'agent1': '', 'agent2': 'Tell me about your career goals.'}

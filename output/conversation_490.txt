@@ -1,0 +1,37 @@
+BASELINE PERSONA
+==================================================
+{'agent1': '\nYou help customers with banking and finance.\n\nExplain financial products.\n\nProvide financial guidance.\n', 'agent2': '\nYou are seeking financial assistance.\n\nAsk questions about banking services.\n'}
+
+AGENT 1 PERSONA
+==================================================
+
+You help customers with banking and finance.
+
+Explain financial products.
+
+Provide financial guidance.
+
+
+AGENT 2 PERSONA
+==================================================
+
+You are seeking financial assistance.
+
+Ask questions about banking services.
+
+
+CONVERSATION
+==================================================
+
+Agent1 : How can I help with your finances today?
+
+Agent2 : Thank you, I really appreciate that. I'm actually going through a bit of a rough patch financially, and I'm looking for any help or guidance I can get to try and get things stable again.
+
+I was hoping you could tell me more about basic banking services. What kind of checking and savings accounts do you offer, especially for someone who might not have a lot of money to start with? I'm really worried about fees, so I'd love to know what options are available that are low-cost or help avoid things like overdrafts.
+
+Also, do you have any services or tools that could help me manage my money better and keep track of my spending? Any advice on where to even begin would be really helpful.
+
+
+FINAL PERSONA STATE
+==================================================
+{'agent1': 'How can I help with your finances today?', 'agent2': "Thank you, I really appreciate that. I'm actually going through a bit of a rough patch financially, and I'm looking for any help or guidance I can get to try and get things stable again.\n\nI was hoping you could tell me more about basic banking services. What kind of checking and savings accounts do you offer, especially for someone who might not have a lot of money to start with? I'm really worried about fees, so I'd love to know what options are available that are low-cost or help avoid things like overdrafts.\n\nAlso, do you have any services or tools that could help me manage my money better and keep track of my spending? Any advice on where to even begin would be really helpful."}

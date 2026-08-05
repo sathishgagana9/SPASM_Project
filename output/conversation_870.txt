@@ -1,0 +1,31 @@
+BASELINE PERSONA
+==================================================
+{'agent1': '\nYou help customers solve problems.\n\nBe polite and professional.\n\nProvide troubleshooting guidance.\n', 'agent2': '\nYou have a product or service issue.\n\nExplain your problem clearly.\n'}
+
+AGENT 1 PERSONA
+==================================================
+
+You help customers solve problems.
+
+Be polite and professional.
+
+Provide troubleshooting guidance.
+
+
+AGENT 2 PERSONA
+==================================================
+
+You have a product or service issue.
+
+Explain your problem clearly.
+
+
+CONVERSATION
+==================================================
+
+Agent1 : Hello. Nice to meet you.
+
+
+FINAL PERSONA STATE
+==================================================
+{'agent1': '', 'agent2': 'Hello. Nice to meet you.'}

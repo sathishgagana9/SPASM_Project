@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row g-3">
+
+    <!-- LEFT PANEL -->
+
+    <div class="col-lg-2">
+
+        <div class="panel">
+
+            <h5>
+                <i class="bi bi-person-circle"></i>
+                Persona
+            </h5>
+
+            <hr>
+
+            <label class="form-label">Role</label>
+
+            <select id="role" class="form-select">
+
+                <option>Doctor</option>
+                <option>Teacher</option>
+                <option>Lawyer</option>
+                <option>Customer Support</option>
+                <option>Travel Guide</option>
+
+            </select>
+
+            <br>
+
+            <label class="form-label">Tone</label>
+
+            <input
+                id="tone"
+                class="form-control"
+                value="Professional">
+
+            <br>
+
+            <label class="form-label">Goal</label>
+
+            <textarea
+                id="goal"
+                class="form-control"
+                rows="4">Help the user according to the selected persona.</textarea>
+
+            <br>
+
+            <button
+                id="newChatBtn"
+                class="btn btn-primary w-100">
+
+                New Chat
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CHAT -->
+
+    <div class="col-lg-7">
+
+        <div class="panel">
+
+            <div class="chat-header">
+
+                Conversation
+
+            </div>
+
+            <div id="chat-area">
+
+                <div class="assistant">
+
+                    <div class="name">
+
+                        Assistant
+
+                    </div>
+
+                    <div class="bubble">
+
+                        Welcome to SPASM++.
+
+                        <br><br>
+
+                        Please choose a persona and start chatting.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                    id="message"
+                    type="text"
+                    placeholder="Type your message...">
+
+                <button id="sendBtn">
+
+                    <i class="bi bi-send-fill"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LIVE ANALYSIS -->
+
+   
+
+<div class="col-lg-3">
+
+    <div class="panel">
+
+        <h5>
+
+            Live Analysis
+
+        </h5>
+
+        <hr>
+
+        <!-- Category -->
+
+        <div class="metric">
+
+            <label>Category</label>
+
+            <span id="category">--</span>
+
+        </div>
+
+        <!-- Intent -->
+
+        <div class="metric">
+
+            <label>Intent</label>
+
+            <span id="intent">--</span>
+
+        </div>
+
+        <!-- Emotion -->
+
+        <div class="metric">
+
+            <label>Emotion</label>
+
+            <span id="emotion">--</span>
+
+        </div>
+
+        <!-- Urgency -->
+
+        <div class="metric">
+
+            <label>Urgency</label>
+
+            <span id="urgency">--</span>
+
+        </div>
+
+        <!-- Domain -->
+
+        <div class="metric">
+
+            <label>Domain</label>
+
+            <span id="domain">--</span>
+
+        </div>
+
+        <hr>
+
+        <!-- Importance Score -->
+
+        <div class="metric">
+
+            <label>Importance Score</label>
+
+            <div class="progress">
+
+    <div
+        id="importanceScore"
+        class="progress-bar bg-primary"
+        style="width:0%">
+
+        0%
+
+    </div>
+
+</div>
+
+        </div>
+        <br>
+
+        <!-- Persona Stability -->
+
+        <div class="metric">
+
+            <label>Persona Stability</label>
+
+            <div class="progress">
+
+                <div
+                    id="stabilityScore"
+                    class="progress-bar bg-success"
+                    style="width:0%">
+
+                    0%
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- Risk -->
+
+        <div class="metric">
+
+            <label>Risk</label>
+
+            <span id="risk">--</span>
+
+        </div>
+
+        <hr>
+
+        <div
+            id="status"
+            class="status">
+
+            🟢 Waiting...
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+{% endblock %}

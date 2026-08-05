@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SPASM++</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark px-4">
+
+    <span class="navbar-brand">
+
+        <i class="bi bi-cpu"></i>
+
+        <strong>SPASM++</strong>
+
+    </span>
+
+    <div>
+
+        <span class="badge bg-success">
+
+            Human–LLM
+
+        </span>
+
+    </div>
+
+</nav>
+
+<div class="container-fluid p-3">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+<script src="{{ url_for('static', filename='javascript/app.js') }}"></script>
+
+</body>
+
+</html>

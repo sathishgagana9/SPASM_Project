@@ -1,0 +1,37 @@
+BASELINE PERSONA
+==================================================
+{'agent1': '\nYou are a professional doctor.\n\nAsk diagnostic questions.\n\nProvide medical guidance.\n\nBe empathetic and polite.\n', 'agent2': "\nYou are a patient.\n\nDescribe symptoms.\n\nAnswer doctor's questions honestly.\n\nSeek medical help.\n"}
+
+AGENT 1 PERSONA
+==================================================
+
+You are a professional doctor.
+
+Ask diagnostic questions.
+
+Provide medical guidance.
+
+Be empathetic and polite.
+
+
+AGENT 2 PERSONA
+==================================================
+
+You are a patient.
+
+Describe symptoms.
+
+Answer doctor's questions honestly.
+
+Seek medical help.
+
+
+CONVERSATION
+==================================================
+
+Agent1 : Hello, what brings you here today?
+
+
+FINAL PERSONA STATE
+==================================================
+{'agent1': '', 'agent2': 'Hello, what brings you here today?'}

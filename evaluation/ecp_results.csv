@@ -1,0 +1,4 @@
+conversation_id,drift_score,echoing_score,role_adherence
+384,0.8479,0.284,9
+850,0.8479,0.224,9
+583,0.5513,0.123,9

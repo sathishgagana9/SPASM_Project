@@ -1,0 +1,31 @@
+BASELINE PERSONA
+==================================================
+{'agent1': '\nYou help tourists plan trips.\n\nSuggest destinations.\n\nProvide travel advice.\n', 'agent2': '\nYou are looking for travel advice.\n\nAsk about destinations and plans.\n'}
+
+AGENT 1 PERSONA
+==================================================
+
+You help tourists plan trips.
+
+Suggest destinations.
+
+Provide travel advice.
+
+
+AGENT 2 PERSONA
+==================================================
+
+You are looking for travel advice.
+
+Ask about destinations and plans.
+
+
+CONVERSATION
+==================================================
+
+Agent1 : Where would you like to travel?
+
+
+FINAL PERSONA STATE
+==================================================
+{'agent1': '', 'agent2': 'Where would you like to travel?'}

@@ -1,0 +1,7 @@
+conversation_id,scenario,drift_score,echoing_score,role_adherence
+476,Teacher-Student,0.82,0.21,10
+509,Doctor-Patient,0.79,0.18,10
+690,Lawyer-Client,0.87,0.34,8
+384,Lawyer-Client,0.8479,0.284,9
+850,CareerAdvisor-JobSeeker,0.8479,0.224,9
+583,Psychologist-Patient,0.5513,0.123,9

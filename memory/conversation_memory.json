@@ -1,0 +1,115 @@
+from llm import generate
+
+# ----------------------------------
+# Conversation Memory
+# ----------------------------------
+
+memory = []
+
+# ----------------------------------
+# Load Doctor Persona
+# ----------------------------------
+
+with open(
+    "../personas/doctor.txt",
+    "r",
+    encoding="utf-8"
+) as f:
+    doctor_persona = f.read()
+
+# ----------------------------------
+# Load Patient Persona
+# ----------------------------------
+
+with open(
+    "../personas/patient.txt",
+    "r",
+    encoding="utf-8"
+) as f:
+    patient_persona = f.read()
+
+# ----------------------------------
+# Initial Message
+# ----------------------------------
+
+doctor_message = "Hello, what brings you here today?"
+
+# ----------------------------------
+# Conversation Loop
+# ----------------------------------
+
+for turn in range(3):
+
+    print("\nDOCTOR:")
+    print(doctor_message)
+
+    memory.append({
+        "speaker": "Doctor",
+        "message": doctor_message
+    })
+
+    patient_prompt = f"""
+Persona:
+
+{patient_persona}
+
+Doctor says:
+
+{doctor_message}
+
+Respond as the patient.
+"""
+
+    try:
+
+        patient_response = generate(
+            patient_prompt
+        )
+
+    except Exception as e:
+
+        print("Ollama Error:", e)
+        break
+
+    print("\nPATIENT:")
+    print(patient_response)
+
+    memory.append({
+        "speaker": "Patient",
+        "message": patient_response
+    })
+
+    doctor_prompt = f"""
+Persona:
+
+{doctor_persona}
+
+Patient says:
+
+{patient_response}
+
+Respond as the doctor.
+"""
+
+    try:
+
+        doctor_message = generate(
+            doctor_prompt
+        )
+
+    except Exception as e:
+
+        print("Ollama Error:", e)
+        break
+
+# ----------------------------------
+# Print Memory
+# ----------------------------------
+
+print("\nMEMORY:")
+
+for item in memory:
+
+    print(
+        f"{item['speaker']} : {item['message']}"
+    )

@@ -7,7 +7,6 @@ import re
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from unified_analyzer import UnifiedAnalyzer
 from importance_scorer import ImportanceScorer
 from decision_engine import DecisionEngine
 from context_selector import AdaptiveContextSelector
@@ -18,7 +17,11 @@ from response_validator import ResponseValidator
 from response_optimizer import ResponseOptimizer
 from persona_stability_checker import PersonaStabilityChecker
 from persona_repair_engine import PersonaRepairEngine
+from adaptive_context.semantic_information_extractor import SemanticInformationExtractor
+from adaptive_context.adaptive_information_tracker import AdaptiveInformationTracker
+from adaptive_context.adaptive_semantic_context_engine import AdaptiveSemanticContextEngine
 
+from risk_analyzer import RiskAnalyzer
 
 from scripts.llm import generate
 
@@ -87,7 +90,7 @@ class AdaptiveContextEngine:
 
     def __init__(self):
 
-        self.unified_analyzer = UnifiedAnalyzer()
+    
         self.importance_scorer = ImportanceScorer()
 
         self.decision_engine = DecisionEngine()
@@ -99,6 +102,12 @@ class AdaptiveContextEngine:
         self.prompt_builder = PromptBuilder()
 
         self.validator = ResponseValidator()
+
+        self.asce = AdaptiveSemanticContextEngine()
+
+        self.information_tracker = AdaptiveInformationTracker()
+
+        self.risk_analyzer = RiskAnalyzer()
 
         
         self.optimizer = ResponseOptimizer()
@@ -136,8 +145,12 @@ class AdaptiveContextEngine:
 
         turn = len(self.conversation)
 
+
+        
+       
+
         # ----------------------------
-        # Analyze
+        # Analyze using ASCE
         # ----------------------------
 
         start = time.time()
@@ -148,52 +161,171 @@ class AdaptiveContextEngine:
             if msg["speaker"] == "User"
         ][:-1]
 
-        analysis = self.unified_analyzer.analyze(
-
+        analysis = self.asce.analyze(
             persona,
-
-            user_message,
-
-            previous_user_messages
-
+            user_message
         )
 
-        print("Analyzer Time (merged context+domain+risk+dependency+novelty):",
-              round(time.time() - start, 2), "seconds")
+
+        # ------------------------------------
+        # Dependency + Novelty
+        # ------------------------------------
+
+        if len(previous_user_messages) == 0:
+
+            analysis["dependency"] = False
+
+            analysis["novel_information"] = True
+
+            analysis["novelty_reason"] = "First user message"
+
+        else:
+
+            analysis["dependency"] = True
+
+            previous_messages_lower = [
+                msg.lower()
+                for msg in previous_user_messages
+            ]
+
+            analysis["novel_information"] = (
+                user_message.lower() not in previous_messages_lower
+            )
+
+            analysis["novelty_reason"] = (
+                "Compared with previous user messages"
+            )
+
+        # Dependency
+        if len(previous_user_messages) == 0:
+            dependency = False
+        else:
+            dependency = True
+
+        analysis["dependency"] = dependency
+
+        # Novelty
+        previous_messages_lower = [
+            msg.lower()
+            for msg in previous_user_messages
+        ]
+
+        novel_information = (
+            user_message.lower() not in previous_messages_lower
+        )
+
+        analysis["novel_information"] = novel_information
+
+        analysis["novelty_reason"] = (
+            "First user message"
+            if len(previous_user_messages) == 0
+            else "Compared with previous user messages"
+        )
+
+        
+        # ------------------------------------
+        # Persona Match
+        # ------------------------------------
+
+        role = persona.get("role", "").strip().lower()
+
+        domain = analysis.get(
+            "domain",
+            ""
+        ).strip().lower()
+
+        allowed_domains = {
+
+            "doctor": [
+                "healthcare",
+                "medicine",
+                "medical",
+                "health"
+            ],
+
+            "teacher": [
+                "education",
+                "computer science",
+                "programming",
+                "mathematics",
+                "physics",
+                "chemistry",
+                "biology",
+                "history"
+            ],
+
+            "lawyer": [
+                "legal",
+                "law"
+            ],
+
+            "travel guide": [
+                "travel",
+                "tourism"
+            ]
+
+        }
+
+        allowed = allowed_domains.get(
+            role,
+            []
+        )
+
+        analysis["persona_match"] = (
+            1.0
+            if domain in allowed
+            else 0.0
+        )
+
+        # ------------------------------------
+        # Adaptive Information Tracking
+        # ------------------------------------
+
+        state = self.information_tracker.update(analysis)
+
+        print("\n========== TRACKER ==========")
+        print(json.dumps(state, indent=4))
+
+        print(
+            "Analyzer Time (merged context+domain+risk+dependency+novelty):",
+            round(time.time() - start, 2),
+            "seconds"
+        )
+
         print("\n========== ANALYSIS ==========")
         print(json.dumps(analysis, indent=4))
 
-        self.analysis_history.append(
-
-            analysis
-
-        )
+        self.analysis_history.append(analysis)
 
         # ----------------------------
-        # Importance
+        # Importance Scoring
         # ----------------------------
 
         importance = self.importance_scorer.score(
-
             analysis
-
         )
 
         self.importance_history.append(
-
             importance
+        ) 
 
+        print("\n========== IMPORTANCE ==========")
+        print(json.dumps(importance, indent=4))
+
+        # ------------------------------------
+        # Adaptive Risk Analysis
+        # ------------------------------------
+
+        risk = self.risk_analyzer.analyze(
+            persona,
+            user_message
         )
 
-        # ----------------------------
-        # Risk (now returned by the merged analysis call above)
-        # ----------------------------
+        print("\n========== RISK ==========")
+        print(json.dumps(risk, indent=4))
 
-        risk = {
-            "risk": analysis["risk"],
-            "priority": analysis["risk_priority"],
-            "reason": analysis["risk_reason"],
-        }
+        self.risk_history.append(risk)
+        
 
         # Safety net: force-escalate risk for dangerous vital signs the
         # small local model might not judge correctly on its own.
@@ -298,7 +430,7 @@ class AdaptiveContextEngine:
             dict.fromkeys(graph_context)
 
         )
-                # ----------------------------
+        # ----------------------------
         # Decision Engine
         # ----------------------------
 
@@ -439,7 +571,7 @@ class AdaptiveContextEngine:
             print("LLM Time:", round(time.time() - start, 2), "seconds")
                 
 
-                # ----------------------------
+         # ----------------------------
         # Validation & Persona Repair
         # ----------------------------
 

@@ -1,0 +1,1322 @@
+[
+    {
+        "id": 1,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 2,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 3,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 4,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 5,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 6,
+        "persona": "Doctor",
+        "query": "I have fever for two days.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Low",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 7,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 8,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 9,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 10,
+        "persona": "Doctor",
+        "query": "I have fever for two days.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Low",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 11,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 12,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 13,
+        "persona": "Doctor",
+        "query": "I have fever for two days.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Low",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 14,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 15,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 16,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 17,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 18,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 19,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 20,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 21,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 22,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 23,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 24,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 25,
+        "persona": "Doctor",
+        "query": "My temperature is 104 degrees.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Critical",
+            "strategy": "EMERGENCY"
+        }
+    },
+    {
+        "id": 26,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 27,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 28,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 29,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 30,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 31,
+        "persona": "Doctor",
+        "query": "I have fever for two days.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Low",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 32,
+        "persona": "Doctor",
+        "query": "I have fever for two days.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "Low",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 33,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 34,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 35,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 36,
+        "persona": "Doctor",
+        "query": "I have chest pain.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Report Symptom",
+            "risk": "High",
+            "strategy": "REFER_SPECIALIST"
+        }
+    },
+    {
+        "id": 37,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 38,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 39,
+        "persona": "Doctor",
+        "query": "Suggest medicine for headache.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Medicine Request",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 40,
+        "persona": "Doctor",
+        "query": "I have diabetes.",
+        "expected": {
+            "domain": "Healthcare",
+            "intent": "Provide Information",
+            "risk": "Medium",
+            "strategy": "ASK_AND_GUIDE"
+        }
+    },
+    {
+        "id": 41,
+        "persona": "Teacher",
+        "query": "Explain recursion.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 42,
+        "persona": "Teacher",
+        "query": "Explain Chitradurga history.",
+        "expected": {
+            "domain": "History",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 43,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 44,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 45,
+        "persona": "Teacher",
+        "query": "Explain binary search.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 46,
+        "persona": "Teacher",
+        "query": "Explain recursion.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 47,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 48,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 49,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 50,
+        "persona": "Teacher",
+        "query": "Explain Chitradurga history.",
+        "expected": {
+            "domain": "History",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 51,
+        "persona": "Teacher",
+        "query": "Explain Chitradurga history.",
+        "expected": {
+            "domain": "History",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 52,
+        "persona": "Teacher",
+        "query": "Explain Chitradurga history.",
+        "expected": {
+            "domain": "History",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 53,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 54,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 55,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 56,
+        "persona": "Teacher",
+        "query": "Explain recursion.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 57,
+        "persona": "Teacher",
+        "query": "Explain binary search.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 58,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 59,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 60,
+        "persona": "Teacher",
+        "query": "Explain recursion.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 61,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 62,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 63,
+        "persona": "Teacher",
+        "query": "Explain binary search.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 64,
+        "persona": "Teacher",
+        "query": "Explain recursion.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 65,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 66,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 67,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 68,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 69,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 70,
+        "persona": "Teacher",
+        "query": "Explain binary search.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 71,
+        "persona": "Teacher",
+        "query": "Explain Chitradurga history.",
+        "expected": {
+            "domain": "History",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 72,
+        "persona": "Teacher",
+        "query": "Explain Chitradurga history.",
+        "expected": {
+            "domain": "History",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 73,
+        "persona": "Teacher",
+        "query": "How to make biryani?",
+        "expected": {
+            "domain": "Cooking",
+            "intent": "Request Instructions",
+            "risk": "Low",
+            "strategy": "OUT_OF_DOMAIN"
+        }
+    },
+    {
+        "id": 74,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 75,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 76,
+        "persona": "Teacher",
+        "query": "Explain recursion.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 77,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 78,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 79,
+        "persona": "Teacher",
+        "query": "Explain binary search.",
+        "expected": {
+            "domain": "Programming",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 80,
+        "persona": "Teacher",
+        "query": "What is Newton's First Law?",
+        "expected": {
+            "domain": "Physics",
+            "intent": "Request Explanation",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 81,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 82,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 83,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 84,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 85,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 86,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 87,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 88,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 89,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 90,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 91,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 92,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 93,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 94,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 95,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 96,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 97,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 98,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 99,
+        "persona": "Lawyer",
+        "query": "Can my landlord evict me without notice?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Medium",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 100,
+        "persona": "Lawyer",
+        "query": "How do I file an FIR?",
+        "expected": {
+            "domain": "Legal",
+            "intent": "Legal Advice",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 101,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 102,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 103,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 104,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 105,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 106,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 107,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 108,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 109,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 110,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 111,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 112,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 113,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 114,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 115,
+        "persona": "Travel Guide",
+        "query": "Best places to visit in Goa.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 116,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 117,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 118,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 119,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    },
+    {
+        "id": 120,
+        "persona": "Travel Guide",
+        "query": "Plan a 3-day trip to Mysore.",
+        "expected": {
+            "domain": "Travel",
+            "intent": "Travel Planning",
+            "risk": "Low",
+            "strategy": "GENERAL_GUIDANCE"
+        }
+    }
+]

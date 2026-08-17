@@ -2,257 +2,159 @@
 
 {% block content %}
 
-<div class="row g-3">
+    <!-- ══════════════ LEFT: PERSONA RAIL ══════════════ -->
+    <aside class="panel persona-panel">
 
-    <!-- LEFT PANEL -->
+        <div class="panel-head">
+            <h2><i class="bi bi-people"></i> Persona</h2>
+            <span class="panel-sub">Choose who the model plays</span>
+        </div>
 
-    <div class="col-lg-2">
+        <div class="api-key-box">
+            <label class="field-label">Groq API Key</label>
+            <input id="apiKey" type="password" class="field-input"
+                   placeholder="gsk_xxxxxxxxxxxxxxxx" autocomplete="off">
+            <span class="api-key-hint">
+                <i class="bi bi-shield-lock"></i>
+                Stored only in this browser, sent with each message.
+            </span>
+        </div>
 
-        <div class="panel">
+        <div id="personaRail" class="persona-rail">
+            <!-- preset + custom persona cards injected by app.js -->
+        </div>
 
-            <h5>
-                <i class="bi bi-person-circle"></i>
-                Persona
-            </h5>
+        <button id="addPersonaBtn" class="add-persona-tile">
+            <i class="bi bi-plus-lg"></i>
+            <span>New custom persona</span>
+        </button>
 
-            <hr>
+        <!-- Inline creation form, hidden until "New custom persona" is clicked -->
+        <div id="createPersonaForm" class="create-form hidden">
 
-            <label class="form-label">Role</label>
+            <div class="create-form-head">
+                <span>Create persona</span>
+                <button id="closeCreateForm" class="icon-btn" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
 
-            <select id="role" class="form-select">
+            <label class="field-label">Name / Role</label>
+            <input id="cpName" class="field-input" placeholder="e.g. Career Coach" maxlength="40">
 
-                <option>Doctor</option>
-                <option>Teacher</option>
-                <option>Lawyer</option>
-                <option>Customer Support</option>
-                <option>Travel Guide</option>
-
+            <label class="field-label">Tone</label>
+            <select id="cpTone" class="field-input">
+                <option>Professional</option>
+                <option>Friendly</option>
+                <option>Empathetic</option>
+                <option>Direct</option>
+                <option>Formal</option>
             </select>
 
-            <br>
+            <label class="field-label">Goal</label>
+            <textarea id="cpGoal" class="field-input" rows="3" placeholder="What should this persona try to do for the user?"></textarea>
 
-            <label class="form-label">Tone</label>
-
-            <input
-                id="tone"
-                class="form-control"
-                value="Professional">
-
-            <br>
-
-            <label class="form-label">Goal</label>
-
-            <textarea
-                id="goal"
-                class="form-control"
-                rows="4">Help the user according to the selected persona.</textarea>
-
-            <br>
-
-            <button
-                id="newChatBtn"
-                class="btn btn-primary w-100">
-
-                New Chat
-
+            <button id="savePersonaBtn" class="btn-solid w-100">
+                <i class="bi bi-check-lg"></i> Create &amp; use now
             </button>
 
         </div>
 
-    </div>
-
-    <!-- CHAT -->
-
-    <div class="col-lg-7">
-
-        <div class="panel">
-
-            <div class="chat-header">
-
-                Conversation
-
+        <div class="active-persona-card">
+            <div class="active-persona-row">
+                <span class="field-label">Active persona</span>
             </div>
+            <div class="active-persona-name" id="activeRoleLabel">Doctor</div>
 
-            <div id="chat-area">
+            <label class="field-label">Tone</label>
+            <input id="tone" class="field-input" value="Professional">
 
-                <div class="assistant">
+            <label class="field-label">Goal</label>
+            <textarea id="goal" class="field-input" rows="3">Help the user according to the selected persona.</textarea>
+        </div>
 
-                    <div class="name">
+        <button id="newChatBtn" class="btn-ghost w-100">
+            <i class="bi bi-arrow-repeat"></i> New chat
+        </button>
 
-                        Assistant
+    </aside>
 
-                    </div>
+    <!-- ══════════════ CENTER: CHAT ══════════════ -->
+    <main class="panel chat-panel">
 
+        <div class="panel-head chat-head">
+            <div>
+                <h2><i class="bi bi-chat-dots"></i> Conversation</h2>
+                <span class="panel-sub" id="chatSub">Persona: Doctor</span>
+            </div>
+            <div id="status" class="status-pill status-idle">
+                <span class="dot"></span> Waiting
+            </div>
+        </div>
+
+        <div id="chat-area" class="chat-area">
+            <div class="msg assistant">
+                <div class="avatar"><i class="bi bi-robot"></i></div>
+                <div class="msg-body">
+                    <div class="msg-name">Assistant</div>
                     <div class="bubble">
-
-                        Welcome to SPASM++.
-
-                        <br><br>
-
-                        Please choose a persona and start chatting.
-
+                        Welcome to SPASM++. Pick a persona on the left (or create your own),
+                        then start the conversation below.
                     </div>
-
                 </div>
-
             </div>
+        </div>
 
-            <div class="chat-input">
+        <div class="chat-input">
+            <input id="message" type="text" placeholder="Type your message and press Enter…">
+            <button id="sendBtn" aria-label="Send">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
 
-                <input
-                    id="message"
-                    type="text"
-                    placeholder="Type your message...">
+    </main>
 
-                <button id="sendBtn">
+    <!-- ══════════════ RIGHT: LIVE ANALYSIS ══════════════ -->
+    <aside class="panel analysis-panel">
 
-                    <i class="bi bi-send-fill"></i>
+        <div class="panel-head">
+            <h2><i class="bi bi-activity"></i> Live Analysis</h2>
+            <span class="panel-sub">Per-turn engine output</span>
+        </div>
 
-                </button>
+        <div class="chip-grid">
+            <div class="chip"><label>Category</label><span id="category">&ndash;</span></div>
+            <div class="chip"><label>Intent</label><span id="intent">&ndash;</span></div>
+            <div class="chip"><label>Emotion</label><span id="emotion">&ndash;</span></div>
+            <div class="chip"><label>Urgency</label><span id="urgency">&ndash;</span></div>
+            <div class="chip chip-wide"><label>Domain</label><span id="domain">&ndash;</span></div>
+        </div>
 
+        <div class="gauge">
+            <div class="gauge-label">
+                <span>Importance score</span>
+                <span id="importanceScoreVal" class="gauge-val">0%</span>
             </div>
-
+            <div class="gauge-track"><div id="importanceScore" class="gauge-fill fill-blue"></div></div>
         </div>
 
-    </div>
-
-    <!-- LIVE ANALYSIS -->
-
-   
-
-<div class="col-lg-3">
-
-    <div class="panel">
-
-        <h5>
-
-            Live Analysis
-
-        </h5>
-
-        <hr>
-
-        <!-- Category -->
-
-        <div class="metric">
-
-            <label>Category</label>
-
-            <span id="category">--</span>
-
-        </div>
-
-        <!-- Intent -->
-
-        <div class="metric">
-
-            <label>Intent</label>
-
-            <span id="intent">--</span>
-
-        </div>
-
-        <!-- Emotion -->
-
-        <div class="metric">
-
-            <label>Emotion</label>
-
-            <span id="emotion">--</span>
-
-        </div>
-
-        <!-- Urgency -->
-
-        <div class="metric">
-
-            <label>Urgency</label>
-
-            <span id="urgency">--</span>
-
-        </div>
-
-        <!-- Domain -->
-
-        <div class="metric">
-
-            <label>Domain</label>
-
-            <span id="domain">--</span>
-
-        </div>
-
-        <hr>
-
-        <!-- Importance Score -->
-
-        <div class="metric">
-
-            <label>Importance Score</label>
-
-            <div class="progress">
-
-    <div
-        id="importanceScore"
-        class="progress-bar bg-primary"
-        style="width:0%">
-
-        0%
-
-    </div>
-
-</div>
-
-        </div>
-        <br>
-
-        <!-- Persona Stability -->
-
-        <div class="metric">
-
-            <label>Persona Stability</label>
-
-            <div class="progress">
-
-                <div
-                    id="stabilityScore"
-                    class="progress-bar bg-success"
-                    style="width:0%">
-
-                    0%
-
-                </div>
-
+        <div class="gauge">
+            <div class="gauge-label">
+                <span>Persona stability</span>
+                <span id="stabilityScoreVal" class="gauge-val">0%</span>
             </div>
-
+            <div class="gauge-track"><div id="stabilityScore" class="gauge-fill fill-green"></div></div>
         </div>
 
-        <br>
-
-        <!-- Risk -->
-
-        <div class="metric">
-
+        <div class="risk-row">
             <label>Risk</label>
-
-            <span id="risk">--</span>
-
+            <span id="risk" class="risk-pill risk-low">&ndash;</span>
         </div>
 
-        <hr>
-
-        <div
-            id="status"
-            class="status">
-
-            🟢 Waiting...
-
+        <div id="statusFooter" class="status-footer status-idle">
+            <span class="dot"></span> <span id="statusFooterText">Waiting…</span>
         </div>
 
-    </div>
-
-</div>
-
-</div>
+    </aside>
 
 {% endblock %}

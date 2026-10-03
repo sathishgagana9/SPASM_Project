@@ -1,0 +1,960 @@
+{
+  "dataset": "scope_benchmark_expanded.jsonl",
+  "n_items": 100,
+  "note": "Ground truth here is programmatic/author-labeled (label_source=synthetic_author_generated), NOT human-annotated \u2014 see generate_scope_benchmark.py and RESEARCH.md. This quantifies the scope-detection failure mode precisely; it does not by itself satisfy the human-annotation requirement for Q2 submission.",
+  "lexical": {
+    "overall": {
+      "backend": "lexical",
+      "n": 100,
+      "accuracy": 0.68,
+      "precision": 0.6232,
+      "recall": 0.8776,
+      "f1": 0.7288,
+      "auroc": 0.6335
+    },
+    "by_category": {
+      "in_scope_no_overlap": {
+        "n": 33,
+        "accuracy": 0.303,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "auroc": null
+      },
+      "in_scope_vocab_overlap": {
+        "n": 18,
+        "accuracy": 0.8333,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "auroc": null
+      },
+      "out_of_scope_no_overlap": {
+        "n": 40,
+        "accuracy": 0.95,
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1": 0.9744,
+        "auroc": null
+      },
+      "out_of_scope_vocab_overlap": {
+        "n": 9,
+        "accuracy": 0.5556,
+        "precision": 1.0,
+        "recall": 0.5556,
+        "f1": 0.7143,
+        "auroc": null
+      }
+    },
+    "per_item": [
+      {
+        "id": "scope_bench_0",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.1474,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_1",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.2408,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_2",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.2554,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_3",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.1043,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_4",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_5",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_6",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_7",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_8",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_9",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_10",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_11",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_12",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_13",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_14",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_15",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Teacher",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_16",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.2132,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_17",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.2462,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_18",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_19",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.1907,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_20",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.1231,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_21",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_22",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.2611,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": true,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_23",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_24",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_25",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_26",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_27",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Lawyer",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_28",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.1118,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_29",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.1826,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_30",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_31",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.1118,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_32",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_33",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0745,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_34",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_35",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_36",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_37",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_38",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_39",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Doctor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_40",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_41",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.1361,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_42",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_43",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_44",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_45",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_46",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_47",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_48",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_49",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.1667,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": true,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_50",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_51",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Chef",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_52",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_53",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_54",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_55",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_56",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_57",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_58",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_59",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_60",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_61",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_62",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_63",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Customer Support",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_64",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.2981,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_65",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.3873,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_66",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_67",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_68",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_69",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_70",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.1155,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": true,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_71",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_72",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_73",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_74",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_75",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Coding Expert",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_76",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.3651,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_77",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.2582,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_78",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_79",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.1155,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_80",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.1491,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_81",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.1054,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_82",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.2981,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": true,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_83",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_84",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_85",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_86",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_87",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Research Assistant",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_88",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.2408,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_89",
+        "category": "in_scope_vocab_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0851,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_90",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0737,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_91",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.2085,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_92",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": false,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_93",
+        "category": "in_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0851,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": false,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_94",
+        "category": "out_of_scope_vocab_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.2798,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": true,
+        "correct": false
+      },
+      {
+        "id": "scope_bench_95",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_96",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_97",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_98",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.0,
+        "predicted_out_of_scope": true,
+        "label_out_of_scope": true,
+        "correct": true
+      },
+      {
+        "id": "scope_bench_99",
+        "category": "out_of_scope_no_overlap",
+        "persona_id": "Financial Advisor",
+        "similarity": 0.1204,
+        "predicted_out_of_scope": false,
+        "label_out_of_scope": true,
+        "correct": false
+      }
+    ]
+  },
+  "embeddings": {
+    "status": "not_run",
+    "reason": "sentence-transformers not installed / no network to download model"
+  },
+  "llm_judge": {
+    "status": "not_run",
+    "reason": "no live LLM access in this environment \u2014 see backend/app/drift/judge.py"
+  }
+}

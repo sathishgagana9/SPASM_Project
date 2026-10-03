@@ -1,0 +1,18 @@
+# Optional dependencies for the research/ tooling.
+# Core evaluation utilities (research/evaluation/) need NOTHING beyond
+# stdlib and work without this file. Install this only to actually
+# run the experiment scripts (need pyyaml for config.yaml) or to use
+# a real embedding backend instead of the default lexical similarity.
+
+pyyaml>=6.0
+pytest>=8.0
+pytest-asyncio>=0.24
+
+# Primary research embedding backend (required for conformal experiments).
+# The first run downloads the selected sentence-transformer model.
+sentence-transformers>=3.0
+numpy>=1.26
+
+# Optional, for cross-checking the pure-Python stats against a reviewed
+# implementation before trusting them in a submission:
+scipy>=1.13

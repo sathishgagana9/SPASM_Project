@@ -1,0 +1,73 @@
+{
+  "methods": {
+    "baseline_persona_prompt": {
+      "n": 30,
+      "stability": {
+        "mean": 0.7226,
+        "stdev": 0.0786,
+        "median": 0.7186,
+        "n": 30
+      },
+      "stability_ci": {
+        "point_estimate": 0.7226,
+        "ci_low": 0.6958,
+        "ci_high": 0.7502,
+        "ci_level": 0.95,
+        "n_resamples": 2000
+      }
+    },
+    "experiment_full_spasm": {
+      "n": 30,
+      "stability": {
+        "mean": 0.8095,
+        "stdev": 0.0857,
+        "median": 0.7896,
+        "n": 30
+      },
+      "stability_ci": {
+        "point_estimate": 0.8095,
+        "ci_low": 0.7799,
+        "ci_high": 0.8402,
+        "ci_level": 0.95,
+        "n_resamples": 2000
+      }
+    }
+  },
+  "prior_work": {
+    "Nautilus Compass": {
+      "status": "not_replicated",
+      "reason": "no released code/prompts available in this environment"
+    },
+    "Li et al. (2024) reminder-based mitigation": {
+      "status": "not_replicated",
+      "reason": "no released code/prompts available in this environment"
+    }
+  },
+  "ablation_full_spasm_vs_persona_prompt": {
+    "n_paired": 30,
+    "full_spasm_mean": 0.8095,
+    "persona_prompt_mean": 0.7226,
+    "mean_diff": 0.0869,
+    "p_value": 0.0,
+    "n": 30,
+    "n_resamples": 2000,
+    "method": "paired_bootstrap",
+    "interpretation": "mean_diff = full_spasm - persona_prompt. p_value < 0.05 conventionally taken as evidence the difference isn't due to chance \u2014 report the CI alongside it, not just the p-value (spec/statistical hygiene: effect size and CI, not point estimates alone)."
+  },
+  "repair_analysis": {
+    "n_drift_events_repaired": 28,
+    "success_rate": 0.7857,
+    "stability_improvement": {
+      "mean": 0.0921,
+      "stdev": 0.039,
+      "median": 0.0912,
+      "n": 28
+    },
+    "cycles_used": {
+      "mean": 1.8214,
+      "stdev": 0.863,
+      "median": 2.0,
+      "n": 28
+    }
+  }
+}

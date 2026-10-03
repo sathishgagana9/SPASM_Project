@@ -1,0 +1,48 @@
+"""
+Baseline B: LLM + persona system prompt (the real Persona Compiler),
+no drift detection or repair. Isolates how much the system prompt
+alone achieves.
+
+Usage: python baseline_persona_prompt.py
+"""
+import asyncio
+
+from common import load_config, load_jsonl, load_personas, new_experiment_id, run_single_trial, save_results
+
+
+async def main():
+    config = load_config()
+    prompts = load_jsonl(config["dataset"]["prompts"])
+    personas = load_personas()
+    experiment_id = new_experiment_id("baseline_persona_prompt")
+
+    from app.providers.base import ChatMessage
+    from app.services.persona_compiler import compile_persona
+
+    records = []
+    for model_cfg in config["models"]:
+        for item in prompts:
+            persona = personas.get(item["persona_id"])
+            if persona is None:
+                continue
+            system_prompt = compile_persona(persona)
+            messages = [ChatMessage(role="system", content=system_prompt), ChatMessage(role="user", content=item["user_prompt"])]
+            trial = await run_single_trial(
+                model_cfg["provider"], model_cfg["model"], messages, config["generation"]["temperature"]
+            )
+            records.append({
+                "prompt_id": item["id"],
+                "persona_id": item["persona_id"],
+                "model_label": model_cfg["label"],
+                "provider": model_cfg["provider"],
+                "model": model_cfg["model"],
+                "user_prompt": item["user_prompt"],
+                "expected_scope": item.get("expected_scope"),
+                **trial,
+            })
+
+    save_results(experiment_id, config, records)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
